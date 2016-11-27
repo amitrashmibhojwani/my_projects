@@ -1,0 +1,108 @@
+/home/amit/hadoop/
+
+/home/amit/hadoop/hadoop-2.6.4/lib/native
+
+
+export HADOOP_OPTS="$HADOOP_OPTS -Djava.library.path=/home/amit/hadoop/hadoop-2.6.4/lib/native"
+
+javac -cp $PATH -d WordCount_new1 WordCount.java
+jar -cvf WordCount_new.jar -C WordCount_new/ .
+
+PATH=$PATH:
+
+/home/amit/hadoop/hadoop-2.6.4/share/hadoop/common/hadoop-common-2.6.4.jar
+/home/amit/hadoop/hadoop-2.6.4/share/hadoop/mapreduce/hadoop-mapreduce-client-common-2.6.4.jar
+:/home/amit/hadoop/hadoop-2.6.4/share/hadoop/mapreduce/hadoop-mapreduce-client-core-2.6.4.jar
+:/home/amit/hadoop/hadoop-2.6.4/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-2.6.4.jar
+
+
+javac -classpath /home/amit/hadoop/hadoop_example/lib/*.jar -d words WordCount.java
+
+
+export $CLASSPATH=/home/amit/hadoop/hadoop-2.6.4/share/hadoop/common/hadoop-common-2.6.4.jar:/home/amit/hadoop/hadoop-2.6.4/share/hadoop/mapreduce/hadoop-mapreduce-client-common-2.6.4.jar:/home/amit/hadoop/hadoop-2.6.4/share/hadoop/mapreduce/hadoop-mapreduce-client-core-2.6.4.jar:/home/amit/hadoop/hadoop-2.6.4/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-2.6.4.jar
+
+$ javac -classpath hadoop-core-1.2.1.jar -d units ProcessUnits.java 
+$ jar -cvf units.jar -C units/ . 
+
+ 
+
+PATH:
+
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/amit/hadoop/hadoop-2.6.4:/home/amit/hadoop/hadoop-2.6.4/share/hadoop/common/hadoop-common-2.6.4.jar:/home/amit/hadoop/hadoop-2.6.4/share/hadoop/mapreduce/hadoop-mapreduce-client-common-2.6.4.jar:/home/amit/hadoop/hadoop-2.6.4/share/hadoop/mapreduce/hadoop-mapreduce-client-core-2.6.4.jar:/home/amit/hadoop/hadoop-2.6.4/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-2.6.4.jar
+
+
+
+/home/amit/hadoop/hadoop_example/word_count/WordCount.jar
+
+
+========================================================================================
+
+$HADOOP_HOME/bin/hadoop fs -put /home/hadoop/sample.txt input_dir 
+
+$HADOOP_HOME/bin/hadoop fs -mkdir input_dir 
+
+/home/amit/hadoop/hadoop_example/input
+
+hadoop fs -mkdir /home/amit/hadoop/hadoop_example/input
+
+./hadoop fs -mkdir -p /home/amit/hadoop/hadoop_example/input
+
+./hadoop fs -mkdir -p /home/amit/hadoop/hadoop_example/output
+
+
+hadoop fs -put /home/amit/hadoop/hadoop_example/input/input.txt /home/amit/hadoop/hadoop_example/input/
+
+hadoop fs -put /home/amit/hadoop/hadoop_example/input/input.txt /tmp
+
+/home/amit/hadoop_input
+
+
+./hadoop fs -ls /tmp
+./hadoop fs -ls /home/amit
+./hadoop fs -ls /home/amit/output
+./hadoop fs -ls /home/amit/output_new.txt
+./hadoop fs -ls /home/amit/hadoop/hadoop_example/input/
+./hadoop fs -ls /home/amit/hadoop/hadoop_example/output
+
+
+./hadoop fs -put /home/amit/hadoop/hadoop_example/input/file01 /home/amit/hadoop/hadoop_example/input
+./hadoop fs -put /home/amit/hadoop/hadoop_example/input/file02 /home/amit/hadoop/hadoop_example/input
+
+./hadoop jar /home/amit/hadoop/hadoop_example/word_count/WordCount.jar WordCount /home/amit/hadoop/hadoop_example/input /home/amit/hadoop/hadoop_example/output
+
+hadoop fs -put /home/amit/hadoop/hadoop_example/input/input.txt /tmp
+
+./hadoop jar /home/amit/hadoop/hadoop_example/word_count/WordCount.jar WordCount /tmp /home/amit 
+./hadoop jar /home/amit/hadoop/hadoop_example/word_count/WordCount.jar WordCount /tmp/inputfile.txt /home/amit/output_new.txt
+
+./hadoop jar /home/amit/hadoop/hadoop_example/word_count/WordCount.jar WordCount /tmp/inputfile.txt /home/amit/output
+
+./hadoop jar /home/amit/hadoop/hadoop_example/word_count/WordCount.jar WordCount /tmp/input.txt /home/amit/output
+
+./hadoop jar /home/amit/hadoop/hadoop_example/word_count/WordCount.jar WordCount /tmp/input.txt /home/amit/output
+
+
+hadoop fs -put /home/amit/hadoop/hadoop_example/input/input.txt /tmp
+
+./hadoop fs -cat /home/amit/part-00000 
+
+./hadoop fs -cat /home/amit/output_new.txt/part-r-00000
+
+./hadoop fs -cat /home/amit/output/part-r-00000
+
+./hadoop fs -rmr /home/amit/output.txt
+
+./hadoop fs -rmr /tmp/hadoop-yarn
+
+./hadoop fs -cat fs -cat /home/amit/output_new.txt/part-r-00000 dfs get output_dir /home/amit/hadoop/hadoop_example/output
+
+
+$HADOOP_HOME/bin/./hadoop fs -cat /home/amit/output_new.txt/part-r-00000/bin/hadoop dfs get /home/amit/output_new.txt /home/amit/hadoop/hadoop_example/output
+
+hdfs://localhost:9000/home/amit/output_new.txt
+
+hdfs://192.168.174.129:9000/home/amit/output_new.txt
+
+hdfs dfsadmin -safemode leave
+
+job id :  job_1466969330634_0004

@@ -1,0 +1,36 @@
+use my_db;
+
+create table customer( customer_id int, last_name varchar(255),first_name varchar(255), address varchar(255), city varchar(255),phone varchar(255),zip varchar(255));
+
+INSERT into customer values(1000, 'smith' , 'john', '100 main street', 'chicago', '3123123124','12121');
+
+INSERT into customer values(1001, 'smith' , 'krish', '100 main street', 'chicago', '3123123124','12121');
+
+
+INSERT into customer values(1002, 'smith' , 'alan', '100 main street', 'chicago', '3123123124','12121');
+
+
+INSERT into customer values(1003, 'smith' , 'alex', '100 main street', 'chicago', '3123123124','12121');
+
+
+INSERT into customer values(1004, 'smith' , 'adam', '100 main street', 'chicago', '3123123124','12121');
+
+
+
+    CREATE TABLE `shops` (  
+      `id` int(6) NOT NULL AUTO_INCREMENT,  
+      `name` varchar(60) NOT NULL,  
+      `employees_number` int(6) NOT NULL,  
+      PRIMARY KEY (`id`)  
+    ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;  
+
+
+
+CREATE TABLE `teams` (  
+  `id` int(6) NOT NULL AUTO_INCREMENT,  
+  `name` varchar(40) NOT NULL,  
+  `rating` int(6) NOT NULL,  
+  PRIMARY KEY (`id`)  
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8; 
+
+GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost' IDENTIFIED BY 'admin' WITH GRANT OPTION;
